@@ -57,7 +57,7 @@ class Current(commands.Cog, name="current", description="View your current tasks
         next10 = [
             Task("Homework Three", "Biology Honors", "Read Pages 23-31 in your textbook and take notes", datetime(2021, 5, 5)),
             Task("Assignment Three", "Pre-Calculus", "Finish the problems on quadratic equations.", datetime(2021, 5, 6)),
-            Task("Essay One", "American History","Finish your essays on the importance of the Madison v. Marbury case", datetime(2021, 5, 7)),
+            Task("Extra Credit", "Biology Honors", "Watch the Discovery Channel and take notes", datetime(2021, 5, 11)),
             Task("Essay One","English Honors", "Please submit your rough drafts of your essay on the importance of Beowulf in Old English literature", datetime(2021, 5, 10)),
             Task("Homework Four", "Biology Honors", "Read Pages 34-45 in your textbook and take notes", datetime(2021, 5, 11)),
             Task("Assignment Four", "Pre-Calculus", "Finish the problems on quadratic equations.", datetime(2021, 5, 12)),
@@ -87,16 +87,14 @@ class Current(commands.Cog, name="current", description="View your current tasks
     brief = "View your upcoming tasks", description = "View your next ten exams!")
     async def viewExams(self, context):
         next10 = [
-            Exam("History Quiz One", "American History", "Short               quiz on the importance of Washington's presidential precident", datetime(2021, 5, 6, 8, 00)),
+            Exam("History Quiz One", "American History", "Short     quiz on the importance of Washington's presidential precident", datetime(2021, 5, 6, 8, 00)),
             Exam("English Quiz One", "English Honors", "Quiz on Beowulf.", datetime(2021, 5, 7, 10, 00)),
             Exam("Bio Quiz One", "Biology Honors", "Will cover the parts of the cell, open notes", datetime(2021, 5, 10, 9, 00)),
             Exam("Calc Quiz One", "Pre-Calculus", "Quiz on      quadratic equations, bring your calculator!", datetime(2021, 5, 12, 11, 00)),
             Exam("Calc Quiz Two", "Pre-Calculus", "Quiz on logarithms and logarithmic equations.", datetime(2021, 5, 19, 11, 00)),
-            Exam("History Quiz Two", "American History", "Short assessment of your understanding of the early presidents",datetime(2021, 5, 20, 8, 00)),
-            Exam("English Essay One", "English Honors", "In class essay on the development of Middle English", datetime(2021, 5, 21, 10, 00)),
-            
             Exam("Bio Quiz Two", "Biology Honors", "Short quiz on recent reading assignment", datetime(2021, 5, 17, 9, 00)),
-            
+            Exam("History Quiz Two", "American History", "Short assessment of your understanding of the early presidents",datetime(2021, 5, 20, 8, 00)),
+            Exam("Bio Test One", "Biology Honors", "Short quiz on recent reading assignment", datetime(2021, 5, 31, 9, 00)),
             Exam("Calc Test One", "Pre-Calculus", "Covers the material learned this semester", datetime(2021, 6, 2, 11,00)),
             Exam("History Test One", "American History", "Covers the material thus far assigned", datetime(2021, 6, 3, 8, 00))
         ]

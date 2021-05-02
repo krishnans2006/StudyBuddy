@@ -45,8 +45,8 @@ def insert_course(name ,description ,days  ,teacher):
             
       if conn:
         cursor = conn.cursor()
-        cursor.execute("insert into Courses (name, description, days, teacher_name) VALUES(%s,%s,%s,%s)",name ,description ,days,teacher)
-        conn.commit();
+        cursor.execute("insert into Courses (name, description, days, teacher_name) VALUES(%s,%s,%s,%s);",name ,description ,days,teacher)
+        
         return True
         
       else:
@@ -63,8 +63,8 @@ def insert_tasks(name,subject,description,dueDate):
             
       if conn:
         cursor = conn.cursor()
-        cursor.execute("insert into Tasks (task_name, subject, task_description, dueDate) VALUES(%s,%s,%s,%s)",name, subject, description, dueDate)
-        conn.commit();
+        cursor.execute("insert into Tasks (task_name, subject, task_description, dueDate) VALUES(%s,%s,%s,%s);",name, subject, description, dueDate)
+       
         return True
         
       else:
@@ -81,8 +81,8 @@ def insert_exam(name,subject,description,Date):
             
       if conn:
         cursor = conn.cursor()
-        cursor.execute("insert into Exams (exam_name, subject, exam_description, exam_date) VALUES(%s,%s,%s,%s)",name,subject,description,Date)
-        conn.commit();
+        cursor.execute("insert into Exams (exam_name, subject, exam_description, exam_date) VALUES(%s,%s,%s,%s);",name,subject,description,Date)
+        
         return True
         
       else:
@@ -95,11 +95,10 @@ def insert_user(lastName  , firstName  , schoolID  ):
                                           db="community",
                                           user="myinstance",
                                           password="123456")
-            
+             
       if conn:
         cursor = conn.cursor()
-        cursor.execute("insert into Exams (lastname  , firstname  , userid )  VALUES(%s,%s,%s )",lastName  , firstName  , schoolID  )
-        conn.commit();
+        cursor.execute(" insert into Users (userid,lastname,firstname) VALUES(%s,%s,%s) ;",lastName,firstName  , schoolID  )
         return True
         
       else:
