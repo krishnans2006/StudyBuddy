@@ -105,11 +105,17 @@ def insert_user(lastName  , firstName  , schoolID  ):
         print("Error while connecting to MySQL")
         return False
        
-def read_query(connection, query):
-    cursor = connection.cursor()
+def read_query(query):
+
+    conn = mysql.connector.connect(host="35.188.102.27",
+                                          db="community",
+                                          user="myinstance",
+                                          password="123456")
+
+    cursor = conn.cursor()
     result = None
 
-    if connection:
+    if conn:
         cursor.execute(query)
         result = cursor.fetchall()
         return result
@@ -117,4 +123,8 @@ def read_query(connection, query):
         print("Error while connecting to MySQL")
         return False
 
-def list_
+def list_tasks(schoolID):
+  
+    query = ("Select * from Tasks where schoolID = %s ;",193313)
+    result = read_query(query)
+    return result;
