@@ -124,7 +124,7 @@ def read_query(query):
         return False
 
 def list_tasks(schoolID):
-  
-    query = ("Select * from Tasks where schoolID = %s ;",193313)
+
+    query = ("Select * from Tasks where userid = %s ;",193313)
     result = read_query(query)
     return result;

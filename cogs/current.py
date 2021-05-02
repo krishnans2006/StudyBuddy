@@ -62,7 +62,7 @@ class Current(commands.Cog, name="current", description="View your current tasks
             Task("Homework Four", "Biology Honors", "Read Pages 34-45 in your textbook and take notes", datetime(2021, 5, 11)),
             Task("Assignment Four", "Pre-Calculus", "Finish the problems on quadratic equations.", datetime(2021, 5, 12)),
             Task("Reading Five", "American History", "Read the fifth chapter in your textbooks", datetime(2021, 5, 13)),
-            Task("Reading Four","English Honors","Read the first story of The Canterbury Tales",datetime(2021, 5, 14)),
+            Task("Reading Six", "American History", "Read the fifth chapter in your textbooks", datetime(2021, 5, 20)),
             Task("Homework Five", "Biology Honors", "Read Pages 48-60 in your textbook and take notes", datetime(2021, 5, 17)),
             Task("Assignment Five", "Pre-Calculus", "Finish the problems on logarithmic equations.", datetime(2021, 5, 18)),
         ]
