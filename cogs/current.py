@@ -42,7 +42,7 @@ class Current(commands.Cog, name="current", description="View your current tasks
                     ),
                     True
                 ],
-                ["Date/Time", "\n\n".join(n.at[current_day] if isinstance(n.at, list) else str(n.at) for n in next10), True],
+                ["Date/Time", "\n\n".join(str(n.at[current_day]) if isinstance(n.at, list) else str(n.at) for n in next10), True],
                 ["Teacher/Class", "\n\n".join(n.subject for n in next10), True],
                 ["Key", "🏫 Class, 📚 Task, 📝 Exam"]
             ]
@@ -51,7 +51,9 @@ class Current(commands.Cog, name="current", description="View your current tasks
     @commands.command(name = "tasks", aliases = ['view tasks','View Tasks'], 
     brief = "View your upcoming tasks", description = "View your next ten tasks!")
     async def viewTasks(self, context):
-      
+      #index = 0
+      #while(index<10):
+        #next10[i]=results[i]
         next10 = [
             Task("Homework Three", "Biology Honors", "Read Pages 23-31 in your textbook and take notes", datetime(2021, 5, 5)),
             Task("Assignment Three", "Pre-Calculus", "Finish the problems on quadratic equations.", datetime(2021, 5, 6)),

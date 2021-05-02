@@ -71,3 +71,21 @@ def insert_tasks(name,subject,description,dueDate):
         print("Error while connecting to MySQL")
         return False
        
+
+def insert_exam(name,subject,description,Date):
+
+      conn = mysql.connector.connect(host="35.188.102.27",
+                                          db="community",
+                                          user="myinstance",
+                                          password="123456")
+            
+      if conn:
+        cursor = conn.cursor()
+        cursor.execute("insert into Exams (exam_name, subject, exam_description, exam_date) VALUES(%s,%s,%s,%s)",name,subject,description,Date)
+        conn.commit();
+        return True
+        
+      else:
+        print("Error while connecting to MySQL")
+        return False
+       
