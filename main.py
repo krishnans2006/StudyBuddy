@@ -14,7 +14,7 @@ for cog in cogs:
 
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.online, activity=discord.Game("with Good Grades!"))
+    await client.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.watching, name="Good Grades!"))
     print("Bot is ready!")
 
 client.run(os.getenv("TOKEN"))
