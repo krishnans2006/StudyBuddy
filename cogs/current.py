@@ -27,7 +27,7 @@ class Current(commands.Cog, name="current", description="View your current tasks
             Class("American History", "History Period 2, Room 21, First Floor.", ["10-11","11-12",None,"7-8","8-9",None,"9-10"], "Mr. Singer"),
             Task("Essay One", "American History","Finish your essays on the importance of the Madison v. Marbury case", datetime(2021, 5, 7)),
             Exam("History Quiz One", "American History", "Short quiz on the importance of Washington's presidential precident", datetime(2021, 5, 6, 8, 00)),
-            Class("English Honors", "Honors English Period 3, at Room 33, First Floor. Please come prepared with notebooks, pencils, and your books.", ["11-12", None, "7-8","8-9","9-10",None,"10-11"], "Mrs. Berg"),
+            Class("English Honors", "Honors English Period 3, at Room 33, First Floor. Please come prepared with notebooks, pencils, and your books.", ["11-12", "12-1", "7-8","8-9","9-10","12-1","10-11"], "Mrs. Berg"),
             Task("Essay One","English Honors", "Please submit your rough drafts of your essay on the importance of Beowulf in Old English literature", datetime(2021, 5, 10)),
             Class("Biology Honors", "Bio Honors Period 4! Room 68, Second Floor. Have fun learning Biology!",[ None, "8-9","9-10","10-11", "11-12",None, "7-8"], "Mr. Jeff")
         ]  
