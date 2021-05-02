@@ -51,6 +51,7 @@ class Current(commands.Cog, name="current", description="View your current tasks
     @commands.command(name = "tasks", aliases = ['view tasks','View Tasks'], 
     brief = "View your upcoming tasks", description = "View your next ten tasks!")
     async def viewTasks(self, context):
+      
         next10 = [
             Task("Homework Three", "Biology Honors", "Read Pages 23-31 in your textbook and take notes", datetime(2021, 5, 5)),
             Task("Assignment Three", "Pre-Calculus", "Finish the problems on quadratic equations.", datetime(2021, 5, 6)),
