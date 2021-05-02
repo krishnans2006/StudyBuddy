@@ -91,7 +91,7 @@ class Current(commands.Cog, name="current", description="View your current tasks
             Exam("Bio Quiz One", "Biology Honors", "Will cover the parts of the cell, open notes", datetime(2021, 5, 10, 9, 00)),
             Exam("Calc Quiz Two", "Pre-Calculus", "Quiz on logarithms and logarithmic equations.", datetime(2021, 5, 19, 11, 00)),
             Exam("English Essay One", "English Honors", "In class essay on the development of Middle English", datetime(2021, 5, 21, 10, 00)),
-            Exam("History Quiz Two", "American History", "Short assessment of your understanding of the early presidents", datetime.(2021, 5, 20, 8, 00)),
+            Exam("History Quiz Two", "American History", "Short assessment of your understanding of the early presidents", datetime(2021, 5, 20, 8, 00)),
             Exam("Bio Quiz Two", "Biology Honors", "Short quiz on recent reading assignment", datetime(2021, 5, 17, 9, 00)),
             Exam("History Test One", "American History", "Covers the material thus far assigned", datetime(2021, 6, 3, 8, 00)),
             Exam("Calc Test One", "Pre-Calculus", "Covers the material learned this semester", datetime(2021, 6, 2, 11,00))
