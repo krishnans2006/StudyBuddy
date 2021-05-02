@@ -272,55 +272,55 @@ class Setup(commands.Cog, name="setup", description="Set up the bot and personal
         else:
             raise Exception("You've broken Python!")
 
-        #New User
-        @commands.command(name='profile', brief="Set up your profile", description="Set up your profile to start planning out your School Life")
-        async def newuser(self, context):
-            embed=create_embed(
-                "Time to add a new user",
-                description="To add a new user, we will need the person's name and school ID number. Please enter your full name."
-            )
-            message = await context.send(embed=embed)
-            resp = await self.client.wait_for("message", check=check(context.author, context.channel))
-            current = User()
-            goodName = False
-            while(goodName==False):
-              if ' ' in resp.content:
-                  current.firstName = resp.content.split(' ')[0]
-                  current.lastName = resp.content.split(' ')[1]
-                  current.fullName = current.firstName + current.lastName
-                  goodName = True
-              elif ',' in resp.content:
-                current.firstName = resp.content.split(',')[0]
-                current.lastName = resp.content.split(',')[1]
+    #New User
+    @commands.command(name='profile', brief="Set up your profile", description="Set up your profile to start planning out your School Life")
+    async def newuser(self, context):
+        embed=create_embed(
+            "Time to add a new user",
+            description="To add a new user, we will need the person's name and school ID number. Please enter your full name."
+        )
+        message = await context.send(embed=embed)
+        resp = await self.client.wait_for("message", check=check(context.author, context.channel))
+        current = User()
+        goodName = False
+        while(goodName==False):
+            if ' ' in resp.content:
+                current.firstName = resp.content.split(' ')[0]
+                current.lastName = resp.content.split(' ')[1]
                 current.fullName = current.firstName + current.lastName
                 goodName = True
-              else:
-                  await context.send("Invalid name! Please enter your full name")
-                  goodName = False
-            embed=create_embed(
-                f"Continue your Profile, {current.firstName}",
-                description="Please enter your school student ID! This is so that you can be recognized by your teachers or students."
-            )
-            message = await context.send(embed=embed)
-            resp = await self.client.wait_for("message", check=check(context.author, context.channel))
-            current.schoolID = resp.content
-            embed = create_embed(
-                f"Confirm your information, {current.firstName}",
-                description="Is this correct? ✅ or ❌",
-                fields=[
-                    ["First Name:", current.firstName, True],
-                    ["Last Name", current.lastName, True],
-                    ["School ID", current.schoolID]
-                ]
-            )
-            message = await context.send(embed=embed)
-            react = await get_reacts(context, self.client, message, ["✅", "❌"])
-            if react.emoji == "✅":
-                await context.send("Successfully set your profile!")
-            elif react.emoji == "❌":
-                await context.send("Cancelled your profile!")
+            elif ',' in resp.content:
+            current.firstName = resp.content.split(',')[0]
+            current.lastName = resp.content.split(',')[1]
+            current.fullName = current.firstName + current.lastName
+            goodName = True
             else:
-                raise Exception("You've broken Python!")
+                await context.send("Invalid name! Please enter your full name")
+                goodName = False
+        embed=create_embed(
+            f"Continue your Profile, {current.firstName}",
+            description="Please enter your school student ID! This is so that you can be recognized by your teachers or students."
+        )
+        message = await context.send(embed=embed)
+        resp = await self.client.wait_for("message", check=check(context.author, context.channel))
+        current.schoolID = resp.content
+        embed = create_embed(
+            f"Confirm your information, {current.firstName}",
+            description="Is this correct? ✅ or ❌",
+            fields=[
+                ["First Name:", current.firstName, True],
+                ["Last Name", current.lastName, True],
+                ["School ID", current.schoolID]
+            ]
+        )
+        message = await context.send(embed=embed)
+        react = await get_reacts(context, self.client, message, ["✅", "❌"])
+        if react.emoji == "✅":
+            await context.send("Successfully set your profile!")
+        elif react.emoji == "❌":
+            await context.send("Cancelled your profile!")
+        else:
+            raise Exception("You've broken Python!")
           
 
 

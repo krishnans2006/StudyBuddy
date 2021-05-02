@@ -89,3 +89,20 @@ def insert_exam(name,subject,description,Date):
         print("Error while connecting to MySQL")
         return False
        
+def insert_user(lastName  , firstName  , schoolID  ):
+
+      conn = mysql.connector.connect(host="35.188.102.27",
+                                          db="community",
+                                          user="myinstance",
+                                          password="123456")
+            
+      if conn:
+        cursor = conn.cursor()
+        cursor.execute("insert into Exams (lastname  , firstname  , userid )  VALUES(%s,%s,%s )",lastName  , firstName  , schoolID  )
+        conn.commit();
+        return True
+        
+      else:
+        print("Error while connecting to MySQL")
+        return False
+       
