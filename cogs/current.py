@@ -18,6 +18,7 @@ class Current(commands.Cog, name="current", description="View your current tasks
     
     @commands.command(name="dashboard", aliases=["db"], brief="View your dashboard", description="View your upcoming classes, tasks, and exams!")
     async def dashboard(self, context):
+      
         next10 = [
             Class("Biology Honors", "Bio Honors Period 4! Room 68, Second Floor. Have fun learning Biology!", [ None, "8-9","9-10","10-11", "11-12",None, None], "Mr. Jeff"),
             Task("Homework Three", "Biology Honors", "Read Pages 23-31 in your textbook and take notes", datetime(2021, 5, 5)),

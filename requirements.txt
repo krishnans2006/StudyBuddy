@@ -1,4 +1,3 @@
 discord.py
-typing.py
 mysql-connector
 discord
