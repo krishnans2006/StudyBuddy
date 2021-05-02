@@ -290,10 +290,10 @@ class Setup(commands.Cog, name="setup", description="Set up the bot and personal
                 current.fullName = current.firstName + current.lastName
                 goodName = True
             elif ',' in resp.content:
-            current.firstName = resp.content.split(',')[0]
-            current.lastName = resp.content.split(',')[1]
-            current.fullName = current.firstName + current.lastName
-            goodName = True
+                current.firstName = resp.content.split(',')[0]
+                current.lastName = resp.content.split(',')[1]
+                current.fullName = current.firstName + current.lastName
+                goodName = True
             else:
                 await context.send("Invalid name! Please enter your full name")
                 goodName = False

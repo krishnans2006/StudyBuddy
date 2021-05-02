@@ -105,3 +105,16 @@ def insert_user(lastName  , firstName  , schoolID  ):
         print("Error while connecting to MySQL")
         return False
        
+def read_query(connection, query):
+    cursor = connection.cursor()
+    result = None
+
+    if connection:
+        cursor.execute(query)
+        result = cursor.fetchall()
+        return result
+    else:
+        print("Error while connecting to MySQL")
+        return False
+
+def list_
