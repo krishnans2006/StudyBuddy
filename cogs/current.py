@@ -57,8 +57,8 @@ class Current(commands.Cog, name="current", description="View your current tasks
         next10 = [
             Task("Homework Three", "Biology Honors", "Read Pages 23-31 in your textbook and take notes", datetime(2021, 5, 5)),
             Task("Assignment Three", "Pre-Calculus", "Finish the problems on quadratic equations.", datetime(2021, 5, 6)),
-            Task("Extra Credit", "Biology Honors", "Watch the Discovery Channel and take notes", datetime(2021, 5, 11)),
             Task("Essay One","English Honors", "Please submit your rough drafts of your essay on the importance of Beowulf in Old English literature", datetime(2021, 5, 10)),
+            Task("Extra Credit", "Biology Honors", "Watch the Discovery Channel and take notes", datetime(2021, 5, 11)),
             Task("Homework Four", "Biology Honors", "Read Pages 34-45 in your textbook and take notes", datetime(2021, 5, 11)),
             Task("Assignment Four", "Pre-Calculus", "Finish the problems on quadratic equations.", datetime(2021, 5, 12)),
             Task("Reading Five", "American History", "Read the fifth chapter in your textbooks", datetime(2021, 5, 13)),
